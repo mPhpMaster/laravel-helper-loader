@@ -1,0 +1,53 @@
+{
+    "name": "mphpmaster/laravel-helper-loader",
+    "description": "Laravel helpers files loader.",
+    "keywords": [
+        "helper",
+        "laravel",
+        "loader"
+    ],
+    "homepage": "https://github.com/mphpmaster/laravel-helper-loader",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "mPhpMaster",
+            "email": "59211285+mPhpMaster@users.noreply.github.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": ">=5.8",
+        "laravel/helpers": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "MPhpMaster\\LaravelHelperLoader\\": "src"
+        },
+        "files": [
+            "src/Helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MPhpMaster\\LaravelHelperLoader\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MPhpMaster\\LaravelHelperLoader\\HelperLoaderServiceProvider"
+            ],
+            "aliases": {
+                "HelperLoader": "MPhpMaster\\LaravelHelperLoader\\HelperLoader"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

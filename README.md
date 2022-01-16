@@ -37,8 +37,22 @@ return [
 
 ## Usage
 
+Put helpers paths in config ``:
+
 ```php
-\MPhpMaster\LaravelHelperLoader\HelperLoader::autoLoad(base_path("app/Helpers"));
+    'auto_load_paths' => [
+        app_path("Helpers"),
+        app_path("Test"),
+        base_path("Helpers"),
+    ],
+```
+
+Or you can manual load:
+
+```php
+use MPhpMaster\LaravelHelperLoader\HelperLoader;
+
+HelperLoader::autoLoad(app_path("Helpers"));
 ```
 
 ## Testing

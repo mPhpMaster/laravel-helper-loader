@@ -37,7 +37,7 @@ return [
 
 ## Usage
 
-Put helpers paths in config ``:
+Put helpers paths in config `config/helper-loader.php`:
 
 ```php
     'auto_load_paths' => [

@@ -34,7 +34,7 @@ class HelperLoader
     {
         $this->files = collect();
         if( $this->setPath($directory_name) ) {
-            $this->files = toCollect((new Filesystem)->files($this->path))
+            $this->files = collect((new Filesystem)->files($this->path))
                 ->filter(fn(SplFileInfo $current_file) => static::isIncludable($current_file))
                 ->map(
                     static fn(SplFileInfo $current_file) => include_once(static::registerIncludedPath($current_file))
